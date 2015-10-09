@@ -20,6 +20,7 @@ public class AppConfig {
 
 	// @Bean
 	DataSource realDataSource() {
+		// 本の通りやったら、DataSourceが複数定義されててNGとはねられたので暫定対応。
 		DataSourceBuilder builder = DataSourceBuilder.create(this.dataSourceProperties.getClassLoader())
 				.url(this.dataSourceProperties.getUrl()).username(this.dataSourceProperties.getUsername())
 				.password(this.dataSourceProperties.getPassword());
@@ -29,6 +30,7 @@ public class AppConfig {
 
 	@Bean
 	DataSource dataSource() {
+		// Log4JDBCをでラップしてログを出すための対応。
 		return new Log4jdbcProxyDataSource(this.realDataSource());
 	}
 

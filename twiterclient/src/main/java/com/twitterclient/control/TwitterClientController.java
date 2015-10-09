@@ -15,6 +15,7 @@ public class TwitterClientController {
 
 	@RequestMapping("/twitter")
 	public String twitter(Model model) {
+		// twitter認証済みかどうかの判定を実施。
 		if (connectionRepository.findPrimaryConnection(Twitter.class) == null) {
 			return "redirect:/connect/twitter";
 		}

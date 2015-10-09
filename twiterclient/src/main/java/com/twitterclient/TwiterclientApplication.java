@@ -5,8 +5,8 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
-@EnableAutoConfiguration
-@ComponentScan
+@EnableAutoConfiguration // 自動設定ON
+@ComponentScan // Componentオートスキャン
 @EnableAspectJAutoProxy // enable aspectj proxy.
 public class TwiterclientApplication {
 

@@ -9,6 +9,7 @@ import org.springframework.util.StringUtils;
 
 @Aspect
 @Component
+// debug用のインターセプタ。
 public class DebuggingInterceptor {
 	@Around("execution(* com.twitterclient..*.*(..))")
 	public Object intercept(ProceedingJoinPoint pjp) throws Throwable {

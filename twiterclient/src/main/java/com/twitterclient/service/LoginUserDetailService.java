@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 import com.twitterclient.model.User;
 import com.twitterclient.repository.UserRepository;
 
+//フォーム認証の実装。
 @Service
 public class LoginUserDetailService implements UserDetailsService {
 
