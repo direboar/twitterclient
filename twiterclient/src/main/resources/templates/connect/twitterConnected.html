@@ -14,7 +14,20 @@
     </div>
 
     <script type="text/x-handlebars-template" id="timeline-template">
-        //TODO
+        <ul>
+            {{#each tweets}} <!--繰り返しを指定する組み込みヘルパー-->
+            <li>
+                <div>
+					<!--jsonのプロパティ名と異なるのは、SpringTwitterAPIが名前を再定義しているためだと思われる-->
+                    <img src="{{user.profileImageUrl}}"></img>　
+                </div>
+                <div>
+                    <h4>{{user.name}}</h4>
+                    <p>{{text}}</p>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
     </script>
 
     <script src="/js/lib/underscore.js"></script>
@@ -26,6 +39,7 @@
     <!--//TODO model＆app.js-->
     <script src="/js/model/Tweets.js"></script>
     <script src="/js/collection/Timeline.js"></script>
+    <script src="/js/view/TimelineView.js"></script>
     <script src="/js/app.js"></script>
 
 </body>
