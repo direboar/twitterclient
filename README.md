@@ -4,5 +4,5 @@ twitterclientをbackbone.jsとspring bootで作って見る予定の妄想中。
 基本的に、入門Backbone.jsを写経していく。
 
 各ブランチのメモ。
-step1. twitterタイムライン取得処理を呼出しまで実施。（p.127)
-
+段階的にブランチ切ってこうと思ったがGITよくわかってなくて失敗したのでまたこんど！
+http://www.takaiwa.net/2012/10/eclipsegit.html#merge_brach
