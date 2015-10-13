@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-	<head>
-		<title>Hello Twitter</title>
-	</head>
-	<body>
-		<h3>Connected to Twitter</h3>
-		
-		<p>
-			You are now connected to your Twitter account.
-			Click <a href="/">here</a> to see your Twitter friends.
-			<a th:href="@{/api/twitter}">test</a>
-		</p>		
-	</body>
+
+<head>
+    <title>Exampe Twitter Backbone Example.</title>
+    <link rel="stylesheet" href="/css/bootstrap.css"></link>
+    <!--<link rel="stylesheet" href="/css/bootstrap.css" />-->
+</head>
+
+<body>
+    <!--timeline view.-->
+    <div id="timeline" class="timeline-view">
+        <h2>あなたのツイート</h2>
+    </div>
+
+    <script type="text/x-handlebars-template" id="timeline-template">
+        //TODO
+    </script>
+
+    <script src="/js/lib/underscore.js"></script>
+    <script src="/js/lib/jquery-1.11.3.js"></script>
+    <script src="/js/lib/backbone.js"></script>
+    <script src="/js/lib/handlebars-v4.0.2.js"></script>
+    <script src="/js/lib/bootstrap.js"></script>
+
+    <!--//TODO model＆app.js-->
+    <script src="/js/model/Tweets.js"></script>
+    <script src="/js/collection/Timeline.js"></script>
+    <script src="/js/app.js"></script>
+
+</body>
+
 </html>

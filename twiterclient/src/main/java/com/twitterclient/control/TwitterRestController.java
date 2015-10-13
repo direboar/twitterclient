@@ -23,7 +23,7 @@ public class TwitterRestController {
 
 	@RequestMapping(value = "/api/twitter/userTimeline", method = RequestMethod.GET)
 	public List<Tweet> getHomeTimeline(
-			@RequestParam(value = "pageSize", required = false, defaultValue = "200") int pageSize,
+			@RequestParam(value = "pageSize", required = false, defaultValue = "20") int pageSize,
 			@RequestParam(value = "sinceId", required = false, defaultValue = "0") int sinceId,
 			@RequestParam(value = "maxId", required = false, defaultValue = "0") long maxId) {
 		if (connectionRepository.findPrimaryConnection(Twitter.class) == null) {
